@@ -5,7 +5,6 @@
 
 USER=kafka
 KAFKA_HOME="/opt/bitnami/kafka"
-ALLOW_PLAINTEXT_LISTENER=yes
 START_COMMAND="${KAFKA_HOME}/bin/kafka-server-start.sh -daemon ${KAFKA_HOME}/config/server.properties && ps ax | grep -i 'java.*kafka' | grep -v grep | awk '{print \$1}'  > ${KAFKA_HOME}/tmp/kafka.pid  && tail -f ${KAFKA_HOME}/logs/server.log"
 
 if [[ -z "$KAFKA_BROKER_ID" ]]; then
