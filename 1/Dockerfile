@@ -10,7 +10,7 @@ RUN bitnami-pkg unpack kafka-1.0.0-3 --checksum ea0d23753d1df82179ffe005f6df2d2d
 
 COPY rootfs /
 
-ENV ALLOW_PLAINTEXT_LISTENER="no" \
+ENV ALLOW_PLAINTEXT_LISTENER="yes" \
     BITNAMI_APP_NAME="kafka" \
     BITNAMI_IMAGE_VERSION="1.0.0-r5" \
     KAFKA_ADVERTISED_LISTENERS="PLAINTEXT://:9092" \
